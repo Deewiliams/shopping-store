@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react'
-import ProductCard from '../Component/ProductCard';
+import CategoryCard from '../Component/ProductCard';
 import { Container,Grid } from '@material-ui/core';
 
 const Category = () => {
@@ -26,7 +26,7 @@ const [categories, setCategories] = useState([])
     <br />
         <Grid container spacing={3}>
             {categories.map((category) => (
-                 <ProductCard
+                 <CategoryCard
                  id={category.id}
                  title={category.name}
                  image={category.image}

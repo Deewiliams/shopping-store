@@ -1,5 +1,5 @@
 import './App.css';
-// import ProductList from './Pages/ProductList';
+import ProductList from './Pages/ProductList';
 import ProductDetail from './Pages/ProductDetail';
 import Category from './Pages/Category';
 import { Routes, Route } from "react-router-dom";
@@ -11,7 +11,7 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Category />} />
-        {/* <Route path="/" element={<ProductList />} /> */}
+        <Route path="/product" element={<ProductList />} />
         <Route path="product_detail/:productId" element={<ProductDetail />} />
       </Routes>
    

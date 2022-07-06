@@ -1,5 +1,5 @@
 import React,{useState, useEffect} from 'react'
-import CategoryCard from '../Component/ProductCard';
+import CategoryCard from '../Component/CategoryCard';
 import { Container,Grid } from '@material-ui/core';
 
 const Category = () => {

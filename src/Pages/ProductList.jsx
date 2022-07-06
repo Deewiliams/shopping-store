@@ -26,21 +26,15 @@ const ProductList = () => {
     return (
         <Container>
             <br />
-            <div>
                 <Grid container spacing={3}>
                     {products.map((product) => (
-                        <>
                          <ProductCard
                          id={product.id}
                          title={product.title}
                          image={product.images[0]}
                          />
-                        </>
                     ))}
-
                 </Grid>
-
-            </div>
         </Container>
     )
 }

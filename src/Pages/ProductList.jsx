@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Grid} from '@material-ui/core';
 import ProductCard from '../Component/ProductCard';
+import Loading from '../Component/Loading'
 
 
 
@@ -19,8 +20,8 @@ const ProductList = () => {
         getProducts();
     }, [])
 
-    if (products !== null) {
-        console.log('products', products);
+    if (products === null) {
+        return <Loading />
     }
 
     return (

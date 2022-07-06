@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid,Typography } from '@material-ui/core'
+import { Grid, Typography } from '@material-ui/core'
 import PropTypes from "prop-types";
 
 const Detail = (props) => {
@@ -8,13 +8,12 @@ const Detail = (props) => {
             <Grid item sm={12} md={6}>
                 <img width={600} height={480} src={props.image} alt={props.title} />
             </Grid>
-            <Grid style={{textAlign: 'left'}} item xs={12} sm={6}>
+            <Grid style={{ textAlign: 'left' }} item xs={12} sm={6}>
                 <h2>{props.title} </h2>
-                <Typography  variant="body2" gutterBottom>
-                description:{props.description}
-                    </Typography>
-                
-                <Typography  variant="body1" gutterBottom>price:{props.price} </Typography>
+                <Typography style={{ fontSize: 30 }} variant="body2" gutterBottom>
+                    Description:{props.description}
+                </Typography>
+                <Typography style={{ fontSize: 30 }} variant="body1" gutterBottom>Price: K{props.price} </Typography>
             </Grid>
         </>
     )

@@ -9,7 +9,7 @@ const ProductCard = (props) => {
             <Grid item sm={6} md={3}>
                 {props.title}
                 <Link to={`/product_detail/${props.id}`}>
-                <img width={250} src={props.image} alt={props.titel} />
+                <img width={250} src={props.image} alt={props.title} />
                 </Link>
             </Grid>
         </>

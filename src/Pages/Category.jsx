@@ -1,15 +1,17 @@
 import React,{useState, useEffect} from 'react'
 import CategoryCard from '../Component/CategoryCard';
 import { Container,Grid } from '@material-ui/core';
+import Loading from '../Component/Loading';
 
 const Category = () => {
-const [categories, setCategories] = useState([])
+const [categories, setCategories] = useState([]);
+const [errorMessage, setErrorMessage] =useState('');
     const getAllCategories = () => {
         fetch('https://api.escuelajs.co/api/v1/categories')
         .then(res => res.json())
         .then(json => setCategories(json))
         .catch((error) => {
-         console.error(error);
+            setErrorMessage(error.message);
         })
     }
 
@@ -17,12 +19,13 @@ const [categories, setCategories] = useState([])
         getAllCategories();
     },[])
 
-    if(categories !== null) {
-        console.log('categoris',categories);
+    if(categories === null) {
+       return <Loading />;
     }
 
   return (
     <Container>
+        <h4>{errorMessage}</h4>
     <br />
         <Grid container spacing={3}>
             {categories.map((category) => (

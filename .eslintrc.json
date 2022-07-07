@@ -19,8 +19,7 @@
       "react/react-in-jsx-scope": "off",
       "import/no-unresolved": "off",
       "no-shadow": "off",
-   " indent": [2, "tab"],
-    "no-tabs": 0
+      "no-tabs": 0
     },
     "ignorePatterns": [
       "dist/",

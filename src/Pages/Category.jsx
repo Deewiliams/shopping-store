@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React,{useState, useEffect} from 'react'
 import CategoryCard from '../Component/CategoryCard';
 import { Container,Grid } from '@material-ui/core';
@@ -5,7 +6,7 @@ import Loading from '../Component/Loading';
 
 const Category = () => {
 const [categories, setCategories] = useState([]);
-const [errorMessage, setErrorMessage] =useState('');
+const [errorMessage, setErrorMessage] = useState('');
     const getAllCategories = () => {
         fetch('https://api.escuelajs.co/api/v1/categories')
         .then(res => res.json())
@@ -22,7 +23,6 @@ const [errorMessage, setErrorMessage] =useState('');
     if(categories === null) {
        return <Loading />;
     }
-
   return (
     <Container>
         <h4>{errorMessage}</h4>

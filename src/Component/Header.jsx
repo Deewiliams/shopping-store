@@ -25,7 +25,7 @@ const Header = () => {
         <Grid container spacing={3}>
           <Grid item xs={12}>
             <Paper className={classes.paper}>
-                <Typography style={{fontSize: 50}}>
+                <Typography style={{fontSize: 50}} data-testid="title">
                 Let's Shop
                 </Typography>
             </Paper>

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Loading = () => {
   return (
-    <div>Loading...</div>
+    <h3 data-testid="loading">Loading...</h3> 
   )
 }
 

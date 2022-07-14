@@ -13,7 +13,7 @@ describe("RenderMovies", () => {
       },
     ];
     render(
-        <ProductList />
+        <ProductList movies={movies} />
     );
   });
 });
